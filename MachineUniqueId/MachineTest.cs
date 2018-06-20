@@ -7,6 +7,14 @@ namespace MachineUniqueId
     public class MachineTest
     {
         [Test]
+        public void GetName()
+        {
+            var name = new Machine().GetName();
+            Console.WriteLine($"CPU: {name}");
+            Assert.IsNotEmpty(name);
+        }
+
+        [Test]
         public void GetCpu()
         {
             var cpu = new Machine().GetCpuId();
