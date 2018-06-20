@@ -20,7 +20,6 @@ namespace MachineUniqueId
             var managementObjects = new ManagementClass(className).GetInstances();
             foreach (var mo in managementObjects)
             {
-                //Get only the first CPU's ID
                 var cpu = mo.Properties[property].Value.ToString();
                 if (!string.IsNullOrWhiteSpace(cpu))
                     return cpu;
